@@ -29,8 +29,8 @@ This project demonstrates how to interface a rotary encoder with the Altera MAX 
 
 ```
 Rotary Encoder:
-  CLK -> CPLD Pin 1
-  DT  -> CPLD Pin 2
+  CLK -> CPLD Pin 55
+  DT  -> CPLD Pin 56
   VCC -> 3.3V or 5V
   GND -> GND
 
@@ -43,7 +43,11 @@ LEDs:
 ```
 
 ---
+## State Table
 
+Below is the state table for the rotary encoder project:
+
+![State Table](C:\Users\Test\Downloads\image.png)
 ## Code Description
 
 ### VHDL/Verilog Design
@@ -83,7 +87,7 @@ endmodule
 ---
 
 ## Simulation
-
+Used Altera Quartus to cretae schematic and verify the functionality
 Use a simulation tool like ModelSim to verify the functionality of the Verilog/VHDL code. Simulate the input signals (`encoder_a` and `encoder_b`) to ensure proper LED transitions.
 
 ---

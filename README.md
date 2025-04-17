@@ -25,6 +25,8 @@ This project demonstrates how to interface a rotary encoder with the Altera MAX 
 
 ## Circuit Diagram
 ![Alt Text](https://app.diagrams.net/#G1BKfS8M5c6pZoAbiBCce9VmJtt2dy0loa#%7B%22pageId%22%3A%22RVINTYbqA5r6dPPLfOth%22%7D)
+![image](https://github.com/user-attachments/assets/d1b12d8d-8a16-47d4-9d2a-89fcbc128814)
+
 ```
 Rotary Encoder:
   CLK -> CPLD Pin 1

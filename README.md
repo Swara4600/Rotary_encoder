@@ -47,7 +47,7 @@ LEDs:
 
 Below is the state table for the rotary encoder project:
 
-![State Table](C:\Users\Test\Downloads\image.png)
+![State Table](https://github.com/Swara4600/Rotary_encoder/blob/main/state_rotary.png)
 ## Code Description
 
 ### VHDL/Verilog Design

@@ -54,37 +54,6 @@ Below is the state table for the rotary encoder project:
 
 The design uses a finite state machine (FSM) to detect the rotation direction of the encoder and updates the LEDs accordingly.
 
-### Example Code (Verilog)
-
-```verilog
-module rotary_encoder_led_control(
-    input clk,         // System clock
-    input reset,       // Reset signal
-    input encoder_a,   // Rotary encoder A (CLK)
-    input encoder_b,   // Rotary encoder B (DT)
-    output reg [3:0] leds // 4 LEDs
-);
-
-    reg [1:0] state; // To track rotation state
-
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            leds <= 4'b0001; // Initialize with LED1 ON
-            state <= 2'b00;
-        end else begin
-            state <= {encoder_a, encoder_b}; // Capture encoder state
-
-            case (state)
-                2'b01: leds <= {leds[2:0], leds[3]}; // Clockwise rotation
-                2'b10: leds <= {leds[0], leds[3:1]}; // Anti-clockwise rotation
-                default: leds <= leds; // No change
-            endcase
-        end
-    end
-endmodule
-```
-
----
 
 ## Simulation
 Used Altera Quartus to cretae schematic and verify the functionality
